@@ -7,6 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://kit.fontawesome.com/6d74166b85.js" crossorigin="anonymous"></script>
 
     <title>CRUD en Codeigniter 4</title>
   </head>
@@ -27,14 +28,13 @@
 					<label for="amaterno">Apellido Materno</label>
 					<input class="form-control" type="text" name="amaterno" id="amaterno">
 					<br>
-					<button class="btn btn-primary">Guardar</button>
+					<button class="btn btn-primary"><i class="fas fa-save"></i> Guardar</button>
 				</form>
 			</div>
 		</div>
 		<br>
 		<hr>
 		<h2>Usuarios registrados</h2>
-		<?php //print_r($datos); ?>
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="table table-responsive">
@@ -51,8 +51,10 @@
 								<td><?php echo $key->nombre ?></td>
 								<td><?php echo $key->apaterno ?></td>
 								<td><?php echo $key->amaterno ?></td>
-								<td><a href="<?php echo base_url().'/obtenerNombre/$key->idUsuario'?>" class="btn btn-warning btn-sm">Editar</a></td>
-								<td><a href="" class="btn btn-danger btn-sm">eliminar</a></td>
+								<td><a href="<?php echo base_url().'/obtenerNombre/'.$key->idUsuario ?>" class="btn btn-warning btn-sm">
+									<i class="fas fa-pencil-alt"></i> Editar</a></td>
+								<td><a href="" class="btn btn-danger btn-sm">
+									<i class="fas fa-trash"></i> Eliminar</a></td>
 						</tr>
 						<?php endforeach;?>
 					</table>
@@ -77,15 +79,20 @@
     -->
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	
+	<!-- Script para mostrar alerts de acuerdo al resultado de la insersión de datos-->
 	<script type="text/javascript">
 		let mensaje = '<?php echo $mensaje?>';
 		
 		if(mensaje == '1'){
 			swal(':)', 'Usuario registrado con éxito', 'success');
 			//alert("Usuario registrado con éxito");
-		} else if(mensaje == 0 ){
+		} else if(mensaje == '0'){
 			swal(':(', '¡Ops! Ocurrió un error al registrar el usuario', 'error');
 			//alert("¡Ops! Ocurrió un error al registrar el usuario");
+		}else if(mensaje == '2'){
+			swal(':)', 'Datos actualizados', 'success');
+		}else if(mensaje == '3'){
+			swal(':(', '¡Ops! Ocurrió un error al actualizar', 'error');
 		}
 	</script>
   </body>

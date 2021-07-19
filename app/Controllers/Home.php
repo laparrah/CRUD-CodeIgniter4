@@ -37,11 +37,33 @@ class Home extends BaseController{
 	}
 
 	public function actualizar(){
-		return view('actualizar');
+		$datos_usuario = [
+			"nombre" => $_POST['nombre'],
+			"apaterno" => $_POST['apaterno'],
+			"amaterno" => $_POST['amaterno']
+		];
+		$id_Usuario = $_POST['idUsuario'];
+		$datos = new UsuariosModel();
+		print_r($datos_usuario);
+/*
+		$respuesta = $datos->actualizar($datos_usuario, $id_Usuario);
+		
+		if($respuesta){
+			return redirect()->to(base_url().'/')->with('mensaje','2');
+		}else{
+			return redirect()->to(base_url().'/')->with('mensaje','3');
+		}
+	*/	
 	}
 
-	public function obtenerNombre($idUsuario){}
+	public function obtenerNombre($idUsuario){
+		$data = ["idUsuario" => $idUsuario];
+		
+		$model = new UsuariosModel();
+		$respuesta = $model->obtenerNombre($data);
+		//$datos_u = ["datos" => $respuesta];
+//print_r($respuesta);
+		return view('actualizar', $respuesta);
+	}
 
-	public function eliminar($idUsuario){}
-
-}
+	public function eliminar($idUsuario){}}

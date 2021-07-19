@@ -142,3 +142,60 @@ CRITICAL - 2021-07-19 11:26:35 --> Column 'nombre' cannot be null
 #8 /Applications/MAMP/htdocs/crud-codeigniter4/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #9 /Applications/MAMP/htdocs/crud-codeigniter4/public/index.php(37): CodeIgniter\CodeIgniter->run()
 #10 {main}
+CRITICAL - 2021-07-19 13:23:54 --> syntax error, unexpected '?>', expecting ')'
+#0 /Applications/MAMP/htdocs/crud-codeigniter4/system/View/View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 /Applications/MAMP/htdocs/crud-codeigniter4/system/Common.php(1271): CodeIgniter\View\View->render('actualizar', Array, true)
+#2 /Applications/MAMP/htdocs/crud-codeigniter4/app/Controllers/Home.php(51): view('actualizar', Array)
+#3 /Applications/MAMP/htdocs/crud-codeigniter4/system/CodeIgniter.php(928): App\Controllers\Home->obtenerNombre('5')
+#4 /Applications/MAMP/htdocs/crud-codeigniter4/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 /Applications/MAMP/htdocs/crud-codeigniter4/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /Applications/MAMP/htdocs/crud-codeigniter4/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-07-19 13:26:38 --> Argument 2 passed to view() must be of the type array, object given, called in /Applications/MAMP/htdocs/crud-codeigniter4/app/Controllers/Home.php on line 51
+#0 /Applications/MAMP/htdocs/crud-codeigniter4/app/Controllers/Home.php(51): view('actualizar', Object(App\Models\UsuariosModel))
+#1 /Applications/MAMP/htdocs/crud-codeigniter4/system/CodeIgniter.php(928): App\Controllers\Home->obtenerNombre('1')
+#2 /Applications/MAMP/htdocs/crud-codeigniter4/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 /Applications/MAMP/htdocs/crud-codeigniter4/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Applications/MAMP/htdocs/crud-codeigniter4/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-07-19 14:04:43 --> syntax error, unexpected '<', expecting end of file
+#0 /Applications/MAMP/htdocs/crud-codeigniter4/system/View/View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 /Applications/MAMP/htdocs/crud-codeigniter4/system/Common.php(1271): CodeIgniter\View\View->render('welcome_message', Array, true)
+#2 /Applications/MAMP/htdocs/crud-codeigniter4/app/Controllers/Home.php(17): view('welcome_message', Array)
+#3 /Applications/MAMP/htdocs/crud-codeigniter4/system/CodeIgniter.php(928): App\Controllers\Home->index()
+#4 /Applications/MAMP/htdocs/crud-codeigniter4/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 /Applications/MAMP/htdocs/crud-codeigniter4/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /Applications/MAMP/htdocs/crud-codeigniter4/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-07-19 14:23:14 --> Call to undefined function App\Controllers\printr()
+#0 /Applications/MAMP/htdocs/crud-codeigniter4/system/CodeIgniter.php(928): App\Controllers\Home->obtenerNombre('1')
+#1 /Applications/MAMP/htdocs/crud-codeigniter4/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 /Applications/MAMP/htdocs/crud-codeigniter4/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /Applications/MAMP/htdocs/crud-codeigniter4/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-07-19 14:40:21 --> syntax error, unexpected '$nombre' (T_VARIABLE)
+#0 /Applications/MAMP/htdocs/crud-codeigniter4/system/View/View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 /Applications/MAMP/htdocs/crud-codeigniter4/system/Common.php(1271): CodeIgniter\View\View->render('actualizar', Array, true)
+#2 /Applications/MAMP/htdocs/crud-codeigniter4/app/Controllers/Home.php(48): view('actualizar', Array)
+#3 /Applications/MAMP/htdocs/crud-codeigniter4/system/CodeIgniter.php(928): App\Controllers\Home->obtenerNombre('1')
+#4 /Applications/MAMP/htdocs/crud-codeigniter4/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 /Applications/MAMP/htdocs/crud-codeigniter4/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /Applications/MAMP/htdocs/crud-codeigniter4/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-07-19 14:42:08 --> Class 'Console' not found
+#0 /Applications/MAMP/htdocs/crud-codeigniter4/system/View/View.php(230): include()
+#1 /Applications/MAMP/htdocs/crud-codeigniter4/system/View/View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 /Applications/MAMP/htdocs/crud-codeigniter4/system/Common.php(1271): CodeIgniter\View\View->render('actualizar', Array, true)
+#3 /Applications/MAMP/htdocs/crud-codeigniter4/app/Controllers/Home.php(48): view('actualizar', Array)
+#4 /Applications/MAMP/htdocs/crud-codeigniter4/system/CodeIgniter.php(928): App\Controllers\Home->obtenerNombre('1')
+#5 /Applications/MAMP/htdocs/crud-codeigniter4/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 /Applications/MAMP/htdocs/crud-codeigniter4/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Applications/MAMP/htdocs/crud-codeigniter4/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-07-19 15:02:52 --> Call to a member function set() on null
+#0 /Applications/MAMP/htdocs/crud-codeigniter4/app/Controllers/Home.php(48): App\Models\UsuariosModel->actualizar(Array, '')
+#1 /Applications/MAMP/htdocs/crud-codeigniter4/system/CodeIgniter.php(928): App\Controllers\Home->actualizar()
+#2 /Applications/MAMP/htdocs/crud-codeigniter4/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 /Applications/MAMP/htdocs/crud-codeigniter4/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Applications/MAMP/htdocs/crud-codeigniter4/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
