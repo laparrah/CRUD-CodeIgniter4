@@ -17,7 +17,7 @@
 		<br>
 		<div class="row">
 			<div class="col-sm-12">
-				<form method="POST" action="<?echo base_url().'/crear'?>">
+				<form method="POST" action="<?php echo base_url().'/crear'?>">
 					<label for="nombre">Nombre</label>
 					<input class="form-control" type="text" name="nombre" id="nombre">
 
@@ -76,5 +76,17 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     -->
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	
+	<script type="text/javascript">
+		let mensaje = '<?php echo $mensaje?>';
+		
+		if(mensaje == '1'){
+			swal(':)', 'Usuario registrado con éxito', 'success');
+			//alert("Usuario registrado con éxito");
+		} else if(mensaje == 0 ){
+			swal(':(', '¡Ops! Ocurrió un error al registrar el usuario', 'error');
+			//alert("¡Ops! Ocurrió un error al registrar el usuario");
+		}
+	</script>
   </body>
 </html>
