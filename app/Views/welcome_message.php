@@ -34,6 +34,7 @@
 		<br>
 		<hr>
 		<h2>Usuarios registrados</h2>
+		<?php //print_r($datos); ?>
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="table table-responsive">
@@ -45,6 +46,15 @@
 							<th>Editar</th>
 							<th>Eliminar</th>
 						</tr>
+						<?php foreach($datos as $key): ?>
+							<tr>
+								<td><?php echo $key->nombre ?></td>
+								<td><?php echo $key->apaterno ?></td>
+								<td><?php echo $key->amaterno ?></td>
+								<td><a href="<?php echo base_url().'/obtenerNombre/$key->idUsuario'?>" class="btn btn-warning btn-sm">Editar</a></td>
+								<td><a href="" class="btn btn-danger btn-sm">eliminar</a></td>
+						</tr>
+						<?php endforeach;?>
 					</table>
 				</div>
 			</div>

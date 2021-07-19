@@ -34,12 +34,12 @@ class Database extends Config
 		'DSN'      => '',
 		'hostname' => 'localhost',
 		'username' => 'root',
-		'password' => '',
+		'password' => 'root',
 		'database' => 'datos',
 		'DBDriver' => 'MySQLi',
 		'DBPrefix' => '',
 		'pConnect' => false,
-		'DBDebug'  => (ENVIRONMENT !== 'production'),
+		'DBDebug'  => (ENVIRONMENT !== 'development'),
 		'charset'  => 'utf8',
 		'DBCollat' => 'utf8_general_ci',
 		'swapPre'  => '',
@@ -47,7 +47,7 @@ class Database extends Config
 		'compress' => false,
 		'strictOn' => false,
 		'failover' => [],
-		'port'     => 8888,
+		'port'     => 3306,
 	];
 
 	/**

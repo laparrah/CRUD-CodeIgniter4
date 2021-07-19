@@ -1,16 +1,25 @@
-<?php
+<?php namespace App\Controllers;
 
-namespace App\Controllers;
+use App\Models\UsuariosModel;
 
 class Home extends BaseController{
 	public function index(){
-		return view('welcome_message');
+
+		$datos = new UsuariosModel();
+		$lista = $datos->listarDatos();
+
+		$data = [ "datos" => $lista ]; 
+		return view('welcome_message', $data);
 	}
 
 	public function crear(){}
 
-	public function actualizar(){}
+	public function actualizar(){
+		return view('actualizar');
+	}
 
-	public function obtenerNombre(){}
+	public function obtenerNombre($idUsuario){}
+
+	public function eliminar($idUsuario){}
 
 }
